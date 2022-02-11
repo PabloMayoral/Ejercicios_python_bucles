@@ -1,4 +1,4 @@
-
+#Algun ejemplo de bucles for
 for i in range(6):
     print(i)
 a = ['Azul','Verde','rojo']

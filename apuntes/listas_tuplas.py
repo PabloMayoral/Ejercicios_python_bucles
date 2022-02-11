@@ -1,3 +1,4 @@
+#Ejercicios de tiplas y lista, como se recorren etc.
 '''lst_names = ['Ana', 'Pedro', 'Ramon', 'Sara']
 lst2 = lst_names.copy()
 lst2.append('Kiko')

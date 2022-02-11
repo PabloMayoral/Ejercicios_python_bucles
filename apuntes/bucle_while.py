@@ -1,3 +1,4 @@
+#Ejercicios de bucles while
 #EJEMPLO DE BUCLE WHILE
 i=1
 while i <6:
