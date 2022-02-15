@@ -22,4 +22,17 @@ for key,value in diccionario.items():
 #variable para copiar una lista:
 diccionario2 = diccionario.copy()
 
+#ejercicio el cual consiste en recorrer la copia de un diccionario para recorrerlo y modificar el original si se cumplen las condiciones
+#el copy es para que mientras se relice la clave no sufra modificaciones y realice bien el bucle.
+colores = {'color1': 'azul','color2':'rojo','color3':'verde'}
+colores2 = colores.copy()
+for v in colores2:
+    if v == 'color1':
+        colores[v] = colores['color2']
+    elif v == 'color2':
+        colores.pop(v)
+    elif v == 'color3':
+        colores['color4'] = 'amarillo'
+print(colores)
+
 
