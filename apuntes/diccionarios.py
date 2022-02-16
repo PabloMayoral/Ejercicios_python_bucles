@@ -20,7 +20,7 @@ for key,value in diccionario.items():
 #para borrar todo el diccionario se usa el .del() o el .clear() (remondedado para borrar un elemento el .pop())
 
 #variable para copiar una lista:
-diccionario2 = diccionario.copy()
+persona = diccionario.copy()
 
 #ejercicio el cual consiste en recorrer la copia de un diccionario para recorrerlo y modificar el original si se cumplen las condiciones
 #el copy es para que mientras se relice la clave no sufra modificaciones y realice bien el bucle.
@@ -34,5 +34,7 @@ for v in colores2:
     elif v == 'color3':
         colores['color4'] = 'amarillo'
 print(colores)
+
+
 
 
