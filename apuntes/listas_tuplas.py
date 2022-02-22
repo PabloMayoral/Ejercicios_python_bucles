@@ -37,3 +37,16 @@ for i in listaNumeros:
         listaNumeros[j] = 12
     j += 1
 print(listaNumeros)
+
+#ejercicio 5 entregable
+lista_numeros = list(range(0,11))
+multiplicacion = []
+tablas = []
+
+for i in lista_numeros:
+    
+    for x in lista_numeros:
+        tablas.append(i*x)
+    multiplicacion.append(tablas)
+    tablas = []
+print(multiplicacion)
