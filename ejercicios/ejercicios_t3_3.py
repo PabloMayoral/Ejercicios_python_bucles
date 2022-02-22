@@ -59,29 +59,4 @@ for i in list_numeros:
     multiplica[i] += [i * 9]
     multiplica[i] += [i * 10]
 print(multiplica)
-'''copia_numList = list_numeros.copy()
-prueba = []
-r = 0
-for x in list_numeros:
-    for s in copia_numList:
-        if x == 0:
-            resultado = x * s
-            multiplica[x] += [resultado] 
-        elif x == 1: 
-            resultado = x * s
-            multiplica[x] += [resultado] 
-        elif x == 2: 
-            resultado = x * s
-            multiplica[x] += [resultado] 
-        elif x == 3: 
-            resultado = x * s
-            multiplica[x] += [resultado] 
-        elif x == 4: 
-            resultado = x * s
-            multiplica[x] += [resultado] 
-        elif x == 5: 
-            resultado = x * s
-            multiplica[x] += [resultado] 
 
-        
-print (multiplica)'''
