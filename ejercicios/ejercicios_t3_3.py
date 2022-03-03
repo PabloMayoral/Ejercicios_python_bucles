@@ -7,8 +7,8 @@ w = 0
 for x in asignaturas_new:
     #print(x)
     if  'o' in x :
-            asignaturas_new.pop(w)
-            print('asignatura a borrar -> '+ str(w) + ' es: ' + x )
+        asignaturas_new.pop(w)
+        print('asignatura a borrar -> '+ str(w) + ' es: ' + x )
     w += 1
 
 print(asignaturas_new)
