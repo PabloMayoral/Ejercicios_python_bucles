@@ -33,7 +33,7 @@ def espacios(texto):
         casteo[w]= i+ ' '
         texto = "".join(casteo)
         w += 1
-    print(texto)
+    return(texto)
 espacios('Un renovación sumamente importante dentro del evolución del hombre moderno')
 
 #5. Crea una función que reciba una lista de números como parámetro y un valor 
@@ -43,9 +43,9 @@ espacios('Un renovación sumamente importante dentro del evolución del hombre m
 def maxMin(lista,booleano):
     lista.sort()
     if booleano == True:
-        print(lista[-1])
+        return lista[-1]
     else:
-        print(lista[0])
+        return lista[0]
 maxMin(list(range(0,11)),True)
 
         

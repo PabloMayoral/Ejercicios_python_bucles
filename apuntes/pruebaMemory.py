@@ -1,27 +1,30 @@
 import os
 import random
 import time
-#Empiezo creando una vqariable tipo lista donde voy a almacenar todos los numeros random que se vayan generando
 listaNumerosRandoms = []
-#declaro dos variables tipo int para marcar el rango de los números aleatorios
-w = 10
-j = 100
-#hago un bucle for con tantas repeticiones como rondas va a tener
-for i in range(0,7):
-    #declaro una variable que contendrá el numero aleatorio que se genere dentro del rango segun el valor de las variables 'w' y 'j'
-    numeroAleatorio = random.randint(w,j)
-    #Añado el numero aleatorio dentro de la lista con esto se añadirá a la lista 7 numeros aleatorios
-    listaNumerosRandoms.append(numeroAleatorio) 
-    #multiplico por 10 las dos variables para ampliar el rango y que haya un digito mas progresivamente
-    w *= 10
-    j *= 10  
+def numRandom():
+    #Empiezo creando una vqariable tipo lista donde voy a almacenar todos los numeros random que se vayan generando
+    
+    #declaro dos variables tipo int para marcar el rango de los números aleatorios
+    w = 10
+    j = 100
+    #hago un bucle for con tantas repeticiones como rondas va a tener
+    for i in range(0,7):
+        #declaro una variable que contendrá el numero aleatorio que se genere dentro del rango segun el valor de las variables 'w' y 'j'
+        numeroAleatorio = random.randint(w,j)
+        #Añado el numero aleatorio dentro de la lista con esto se añadirá a la lista 7 numeros aleatorios
+        listaNumerosRandoms.append(numeroAleatorio) 
+        #multiplico por 10 las dos variables para ampliar el rango y que haya un digito mas progresivamente
+        w *= 10
+        j *= 10  
 
-puntuacion = 0
-vidas = 2
-i = 0
-partidaTerminada = False
-longitudNumRandom = len(listaNumerosRandoms)-1
-try:    
+
+def juega():
+    puntuacion = 0
+    vidas = 2
+    i = 0
+    partidaTerminada = False
+    longitudNumRandom = len(listaNumerosRandoms)-1
 #hago un bucle while que se repita tantas veces como elementos haya en la lista, asi en caso de añadir mas rondas el codigo no se ve afectado
 #en la variable de la longitudNumRandom al len le resto 1 para que este dentro del rango
     while i < longitudNumRandom:
@@ -58,12 +61,32 @@ try:
             print('Te quedaste sin vidas, fin del juego...')
             print('Tu puntuación final es de: '+ str(puntuacion) + ' puntos')
             i = longitudNumRandom
-            ''' if partidaTerminada == True:
-                 inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
-                 if inputPlayAgain == 'start':
-                     partidaTerminada == False'''
-                     
-except:
-    print('error')            
+            if partidaTerminada == True:
+                inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
+                if inputPlayAgain == 'start':
+                    partidaTerminada == False
+                    try:
+                        listaNumerosRandoms.clear()
+                        numRandom()
+                        juega()
+                    except:
+                        print('error dentro de la funcion')  
+                else:
+                    clear()
+    inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
+    if inputPlayAgain == 'start':
+        partidaTerminada == False
+        try:
+            listaNumerosRandoms.clear()
+            numRandom()
+            juega()
+        except:
+            print('solo puedes utilizar numeros') 
+    else:
+        clear()
+numRandom()
+juega()   
+
+     
             
 
