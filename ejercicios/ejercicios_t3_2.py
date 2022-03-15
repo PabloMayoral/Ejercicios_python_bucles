@@ -150,4 +150,5 @@ for i in mensajeMinusculas:
 print('Hay un total de '+ str(contadorDeAes) + ' Aes')
 print('Hay un total de '+ str(cuentaNumeros) + ' números')  
 print('Hay un total de '+ str(longitudMensaje-cuentaNumeros-cuentaEspaciosVacios) + ' letras')  
+#para ahorrarme condiciones se puede hacer con if i.lower() in [a,e,i,o,u]
    

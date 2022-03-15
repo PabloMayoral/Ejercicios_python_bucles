@@ -58,10 +58,10 @@ try:
             print('Te quedaste sin vidas, fin del juego...')
             print('Tu puntuación final es de: '+ str(puntuacion) + ' puntos')
             i = longitudNumRandom
-            if partidaTerminada == True:
+            ''' if partidaTerminada == True:
                  inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
                  if inputPlayAgain == 'start':
-                     partidaTerminada == False
+                     partidaTerminada == False'''
                      
 except:
     print('error')            
