@@ -39,21 +39,26 @@ def juega():
             #con el print de abajo indico en todo momento en que ronda se encuentra
             print('Te encuentras en la ' + str(fase) +'ª fase del juego!')
             #creo un input para que el usuario introduxca el numero que sale por consola
-            my_input = int(input('Introduce el número que apareció en pantalla: '))
-            #Si el numero que introduce el usuario es igual que el de la lista se le suma 1 la puntuacion y fase
-            if my_input == listaNumerosRandoms[i]:
-                puntuacion += 1
-                fase = i+1
-                i +=1
-                #el siguiente print tiene como funcion informar de la puntuacion del usuario tras la ronda
-                print('Enhorabuena, has pasado a la siguiente fase, tu puntuación es de: ' + str(puntuacion) + ' puntos, y tu número de vidas es de: ' + str(vidas))
-            else:
-                #Si el numero que se ha introducido es incorrecto se resta una vida y si el numero de vidas llega a cero la partida se termina
-                vidas -= 1
-                fase = i+1
-                i +=1
-                if vidas == 0:
-                    partidaTerminada = True
+           
+            try:
+                my_input = int(input('Introduce el número que apareció en pantalla: '))
+                #Si el numero que introduce el usuario es igual que el de la lista se le suma 1 la puntuacion y fase
+                if my_input == listaNumerosRandoms[i]:
+                    puntuacion += 1
+                    fase = i+1
+                    i +=1
+                    #el siguiente print tiene como funcion informar de la puntuacion del usuario tras la ronda
+                    print('Enhorabuena, has pasado a la siguiente fase, tu puntuación es de: ' + str(puntuacion) + ' puntos, y tu número de vidas es de: ' + str(vidas))
+                else:
+                    #Si el numero que se ha introducido es incorrecto se resta una vida y si el numero de vidas llega a cero la partida se termina
+                    vidas -= 1
+                    fase = i+1
+                    i +=1
+                    if vidas == 0:
+                        partidaTerminada = True
+            except:
+                print('introduce un numero, no uses letras')
+                juega()
         else:
             clear()
             #En este else debo meter un break para romper el bucle y evitar un bucle infinito de los prints de este else
