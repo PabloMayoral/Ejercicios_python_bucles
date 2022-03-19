@@ -18,7 +18,6 @@ def numRandom():
         w *= 10
         j *= 10  
 
-
 def juega():
     puntuacion = 0
     vidas = 2
