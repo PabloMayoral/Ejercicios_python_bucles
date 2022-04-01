@@ -1,10 +1,9 @@
 import os
 import random
 import time
+#Empiezo creando una vqariable tipo lista donde voy a almacenar todos los numeros random que se vayan generando
 listaNumerosRandoms = []
 def numRandom():
-    #Empiezo creando una vqariable tipo lista donde voy a almacenar todos los numeros random que se vayan generando
-    
     #declaro dos variables tipo int para marcar el rango de los números aleatorios
     w = 10
     j = 100
@@ -17,7 +16,6 @@ def numRandom():
         #multiplico por 10 las dos variables para ampliar el rango y que haya un digito mas progresivamente
         w *= 10
         j *= 10  
-
 def juega():
     puntuacion = 0
     vidas = 2
@@ -66,7 +64,7 @@ def juega():
             print('Tu puntuación final es de: '+ str(puntuacion) + ' puntos')
             i = longitudNumRandom
             if partidaTerminada == True:
-                inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
+                inputPlayAgain = input('Escribe start si quieres jugar otra vez , en caso contrario escribe no: ')
                 if inputPlayAgain == 'start':
                     partidaTerminada == False
                     try:
@@ -75,9 +73,9 @@ def juega():
                         juega()
                     except:
                         print('error dentro de la funcion')  
-                else:
-                    clear()
-    inputPlayAgain = input('Escribe start si quieres jugar otra vez: ')
+                elif inputPlayAgain == 'no':
+                    break
+    inputPlayAgain = input('Escribe start si quieres jugar otra vez, en caso contrario escribe no: ')
     if inputPlayAgain == 'start':
         partidaTerminada == False
         try:
@@ -86,7 +84,7 @@ def juega():
             juega()
         except:
             print('solo puedes utilizar numeros') 
-    else:
+    elif inputPlayAgain == 'no':
         clear()
 numRandom()
 juega()   
