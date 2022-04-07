@@ -82,8 +82,12 @@ print('_________________________________________________________________________
 class controladorLista():
     def __init__(self,lista):
         self.lista = lista
-    def anyadir(self,variable):
-        self.lista.append(variable)
+    def anyadir(self,variable1, variable2 = None):
+        if variable2 != None:
+            self.lista.insert(5,variable1)
+            self.lista.insert(8,variable2)
+        else:
+            self.lista.append(variable1)
         return self.lista
     def delete(self, variable):
         j = 0
@@ -92,22 +96,9 @@ class controladorLista():
                 self.lista.pop(j)
             j += 1
         return self.lista
-
-class controladorListaHijo(controladorLista):
-    def __init__(self,lista):
-        super().__init__(lista)
-    def anyadir(self,variable1,variable2):
-        self.lista.insert(int(input('introduzca la posicion donde lo quiere introducir la variable nº1: ')),variable1)
-        self.lista.insert(int(input('introduzca la posicion donde lo quiere introducir la variable nº2: ')),variable2)
-        return self.lista
-
-    
-
 modList = controladorLista(list(range(0,20)))
 modList.anyadir(80)
-modListHijo = controladorListaHijo(list(range(0,20)))
-print(modListHijo.anyadir(18,65))
-#modList.anyadir(67,'hola')
+modList.anyadir(99,100)
 print(modList.delete(6))
 print('_________________________________________________________________________________________________')
 
@@ -137,20 +128,44 @@ class direccionPostal:
         self.cp = cp
         self.ciudad = ciudad
         self.provincia = provincia
-        self.dictPostal = {'tipo de vía' : self.tipoVia, 'calle': self.nombreCalle, 'numero':self.numero,'puerta':self.puerta
-        ,'piso': self.piso,'cod_postal': self.cp,'ciudad':self.ciudad,'provincia':self.provincia }
-    def cambiaDatos(self):
-        selectDato = input('introduzca el dato que se desea cambiar: ')
-        for i in self.dictPostal.keys():
-            if i == selectDato:
-                self.dictPostal[i]=input('introduzca el dato deseado: ')
-        return self.dictPostal
+        
+    def cambiaTipoVia(self, _newVia):
+        self.tipoVia = _newVia
+        return self.tipoVia
+    def cambiaNombreCalle(self, _newCalle):
+        self.nombreCalle = _newCalle
+        return self.nombreCalle
+    def cambiaNumero(self, _newNumero):
+        self.numero = _newNumero
+        return self.numero
+    def cambiaPuerta(self, _newPuerta):
+        self.puerta = _newPuerta
+        return self.puerta
+    def cambiaPiso(self, _newPiso):
+        self.piso = _newPiso
+        return self.piso
+    def cambiaCP(self, _newCP):
+        self.cp = _newCP
+        return self.cp
+    def cambiaTCiudad(self, _newCiudad):
+        self.ciudad = _newCiudad
+        return self.ciudad
+    def cambiaProvincia(self, _newProvincia):
+        self.provincia = _newProvincia
+        return self.provincia
     def muestraDatos( self):
         #el objetivo era hacerlo en un solo print usando el /n pero se imprime el /n y no hace el salto de linea asi que lo he puesto en 3 print 
-       casteoDictValues = list(self.dictPostal.values())
-       print(str(casteoDictValues[:-3]))
-       print(str(casteoDictValues[5:7])) 
-       print(str(casteoDictValues[-2:-1]))
+       print(self.tipoVia + ' ' + self.nombreCalle + ' ' + self.numero + ' ' + self.puerta + ' ' + self.piso)
+       print(self.cp + ' ' + self.ciudad)
+       print(self.provincia)
+       
 modPostal = direccionPostal('calle','Fuente Carrantona','38','dcha','E','28030','Madrid','Madrid')
-print(modPostal.cambiaDatos())
+modPostal.cambiaTipoVia('avenida')
+modPostal.cambiaNombreCalle(' Rabat')
+modPostal.cambiaNumero('23')
+modPostal.cambiaPuerta('A')
+modPostal.cambiaPiso('1º')
+modPostal.cambiaCP('28031')
+modPostal.cambiaTCiudad('Madrid')
+modPostal.cambiaProvincia('Madrid')
 modPostal.muestraDatos()

@@ -1,4 +1,4 @@
-'''class persona:
+class persona:
     def __init__(self, nombre,apellido):
         self.nombre = nombre
         self.apellidos = apellido
@@ -12,9 +12,9 @@ class alumno(persona):
        super().__init__(nombre,apellido)
 pintaAlumn = alumno('Pablo','Mayoral')
 pintaAlumn.imprimirNombre()
-'''
 
-class Padre1:
+
+'''class Padre1:
     def Imprimir1(self):
         print('Padre1 llamado')
 class Padre2:
@@ -30,4 +30,33 @@ class hija(Padre1,Padre2):
         print('Metodo imprimir2 sobreescrito')
 llama = hija()
 llama.imprimir()
-llama.Imprimir1()
+llama.Imprimir1()'''
+
+'''class padre1:
+    def __init__(self,texto):
+        self.texto = texto
+    def imprimirTexto(self):
+        print('El mensaje recibido es: ' + self.texto)
+class hija(padre1):
+    def __init__(self,texto,caracter):
+        super().__init__(texto)
+        self.caracter = caracter
+    def devolver(self):
+        return self.texto.count(self.caracter)
+        
+c1 = padre1('Crea una clase en python llamada ManipuladoraTexto cuyo objetivo es contener varias funciones para manipular cadenas de texto.')
+#c1.imprimirTexto()
+
+h1 = hija('Crea una clase en python llamada ManipuladoraTexto cuyo objetivo es contener varias funciones para manipular cadenas de texto.','a')
+h1.imprimirTexto()'''
+#print(h1.devolver())
+
+
+a =1 
+print(isinstance(a,int))
+b ='hola' 
+print(isinstance(b,str))
+obj1 = persona('Pablo','Martin')
+print(isinstance(obj1, persona))
+obj2 = alumno('Pablo','Martin')
+print(isinstance(obj2, persona))
