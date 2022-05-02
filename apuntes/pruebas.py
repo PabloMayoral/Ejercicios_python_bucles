@@ -1,7 +1,29 @@
+lista = [2,5,3,1,5]
+lista.sort()
+print(lista)
 
 
 
-def tipos(lista):
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''def tipos(lista):
     copylista = lista.copy() 
     dict = {}
     resultado = 1
@@ -12,4 +34,14 @@ def tipos(lista):
             else:
                 dict[type(i)] = resultado
     print(dict)
-tipos([11,['a','b'],(1,2),{'nombre':'Pablo','Apellidos':'Martin'},'texto',87.2,[1,2]])
+tipos([11,['a','b'],(1,2),{'nombre':'Pablo','Apellidos':'Martin'},'texto',87.2,[1,2]])'''
+
+
+
+'''lista = [1]
+print(len(lista))
+lista.insert(4,5)
+print(lista)
+
+dni = '46456575'
+print(dni[-3:])'''

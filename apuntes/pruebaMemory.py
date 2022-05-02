@@ -21,7 +21,7 @@ def juega():
     vidas = 2
     i = 0
     partidaTerminada = False
-    longitudNumRandom = len(listaNumerosRandoms)-1
+    longitudNumRandom = len(listaNumerosRandoms)
 #hago un bucle while que se repita tantas veces como elementos haya en la lista, asi en caso de añadir mas rondas el codigo no se ve afectado
 #en la variable de la longitudNumRandom al len le resto 1 para que este dentro del rango
     while i < longitudNumRandom:
@@ -87,6 +87,7 @@ def juega():
     elif inputPlayAgain == 'no':
         clear()
 numRandom()
+print(listaNumerosRandoms)
 juega()   
 
      

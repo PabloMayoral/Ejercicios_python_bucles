@@ -112,6 +112,7 @@ def ordenacionBurbuja(numeros):
                 numeros[i],numeros[i+1] = numeros[i+1],numeros[i]
                 intercambio=True
 lista = [5,2,6,8,22,1,23,21,45,0]
+
 ordenacionBurbuja(lista)       
 print(lista) 
         
