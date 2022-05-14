@@ -2,7 +2,15 @@ lista = [2,5,3,1,5]
 lista.sort()
 print(lista)
 
-
+def NumCount(self):
+        aux = 0
+        acumulaResultados.sort()
+        copia = acumulaResultados.copy()
+        for i in copia:
+            if acumulaResultados[aux]==acumulaResultados[aux+1]:
+                copia.pop(aux)
+            aux +=1
+        return (copia)
 
 
 

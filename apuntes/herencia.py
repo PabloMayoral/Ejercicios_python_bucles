@@ -62,7 +62,7 @@ obj2 = alumno('Pablo','Martin')
 print(isinstance(obj2, persona))
 '''
 class Vehiculo:
-    def _init_(self):
+    def __init__(self):
         self.peso=0
         self.largo=0
         self.ancho=0
@@ -78,8 +78,8 @@ class Vehiculo:
 #es una clase coche heredada de vehículo, ya puedo poner argumentos
 class Coche(Vehiculo):
     #constructor
-    def _init_(self,peso,largo,ancho,marca,modelo):
-        super()._init_()
+    def __init__(self,peso,largo,ancho,marca,modelo):
+        super().__init__()
         #inicialición de datos
         self.SetPeso(peso)
         self.SetLargo(largo)
@@ -99,7 +99,7 @@ class Coche(Vehiculo):
         return (str(self.largo)+"metros")
     def GetAncho(self):
         return (str(self.ancho)+"metros")
-    def _str_(self): #da info del objeto a mi gusto
+    def __str__(self): #da info del objeto a mi gusto
         datos="datos del "+self.marca +" "+self.modelo+":"
         datos += "\n -- peso: "+self.GetPeso()
         datos += "\n -- largo: "+self.GetLargo()
