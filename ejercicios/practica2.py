@@ -127,7 +127,7 @@ class partida(usuario,maquina,funcionamiento,dados):
                 self.juegarondaIA()
                 print(self.NumCountIA())
                 if self.puntosUser > self.puntosIA:
-                    print('Ganaste!!!!')
+                    print('Ganaste '+ 'con '+str(self.puntosUser)+' puntos!!')
                 elif self.puntosUser < self.puntosIA:
                     print('Perdiste!!!')
                 elif self.puntosUser == self.puntosIA:
@@ -135,6 +135,9 @@ class partida(usuario,maquina,funcionamiento,dados):
             self.y = input('¿Quieres jugar de nuevo? Escribe "si" o "no": ')
             if self.y == 'si':
                 self.partidaTerminadaUser = True
+                self.puntosUser = 0
+                self.puntosIA = 0
+                self.acumulaResultados.clear()
                 self.comienzaPartida()
             else:
                 print('Gracias por jugar')
